@@ -1,0 +1,131 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0 5em 5em 5em;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.content {
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 3em;
+    color: #ffcc00;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid #fff;
+    animation: typing 3s steps(20, end) forwards;
+}
+
+p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    font-size: 1.5em;
+    color: #ccc;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center; /* Center the buttons */
+}
+
+.button {
+    padding: 15px 30px;
+    font-size: 1em;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border: 2px solid #fff2bc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 25%; 
+}
+
+.button:hover {
+    background-color: #000;
+    color: #ffcc00;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.dot {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: float 5s infinite ease-in-out;
+    z-index: 1;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-30px) translateX(20px) rotate(45deg);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .buttons {
+        width: auto; 
+    }
+
+}
